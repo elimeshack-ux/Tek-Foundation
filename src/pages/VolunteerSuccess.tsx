@@ -156,10 +156,10 @@ const VolunteerSuccess = () => {
           <div className="border-t border-gray-100 pt-6">
             <p className="text-xs text-gray-500 mb-3">While you wait, follow us for updates:</p>
             <div className="flex justify-center gap-4 mb-6">
-              <a href="#" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Linkedin size={20} /></a>
+              <a href="https://facebook.com/tek_foundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Facebook size={20} /></a>
+              <a href="https://instagram.com/tek_foundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Instagram size={20} /></a>
+              <a href="https://twitter.com/tek_foundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Twitter size={20} /></a>
+              <a href="https://linkedin.com/company/tek-foundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Linkedin size={20} /></a>
             </div>
             
             <p className="text-xs text-gray-400 flex items-center justify-center gap-1 mb-1">
