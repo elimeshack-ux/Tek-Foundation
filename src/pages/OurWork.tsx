@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import SEO from '../components/SEO';
+import CountUp from '../components/ui/CountUp';
 
 const OurWork = () => {
   return (
@@ -57,7 +58,9 @@ const OurWork = () => {
                 ))}
               </ul>
               <div className="bg-cream p-6 rounded-xl border-l-4 border-gold mb-8">
-                <div className="font-bold text-3xl text-forest mb-1">5,000+</div>
+                <div className="font-bold text-3xl text-forest mb-1 flex items-center">
+                  <CountUp to={5000} />+
+                </div>
                 <div className="text-sm text-gray-600 uppercase tracking-wider">Meals Served Annually</div>
               </div>
               <Link to="/get-involved" className="bg-forest hover:bg-deep-green text-white px-8 py-3 rounded-full font-bold transition-colors inline-flex items-center">
@@ -102,7 +105,9 @@ const OurWork = () => {
                 ))}
               </ul>
               <div className="bg-cream p-6 rounded-xl border-l-4 border-gold mb-8">
-                <div className="font-bold text-3xl text-forest mb-1">20+</div>
+                <div className="font-bold text-3xl text-forest mb-1 flex items-center">
+                  <CountUp to={20} />+
+                </div>
                 <div className="text-sm text-gray-600 uppercase tracking-wider">Communities Reached</div>
               </div>
               <Link to="/get-involved" className="bg-forest hover:bg-deep-green text-white px-8 py-3 rounded-full font-bold transition-colors inline-flex items-center">
@@ -133,7 +138,9 @@ const OurWork = () => {
                 ))}
               </ul>
               <div className="bg-cream p-6 rounded-xl border-l-4 border-gold mb-8">
-                <div className="font-bold text-3xl text-forest mb-1">150+</div>
+                <div className="font-bold text-3xl text-forest mb-1 flex items-center">
+                  <CountUp to={150} />+
+                </div>
                 <div className="text-sm text-gray-600 uppercase tracking-wider">Families Empowered</div>
               </div>
               <Link to="/get-involved" className="bg-forest hover:bg-deep-green text-white px-8 py-3 rounded-full font-bold transition-colors inline-flex items-center">

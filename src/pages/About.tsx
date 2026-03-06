@@ -49,7 +49,7 @@ const About = () => {
                 What started as a small group of volunteers distributing meals on weekends has grown into a structured organization committed to systemic change. We believe that by addressing immediate hunger while simultaneously building long-term capacity, we can break the cycle of poverty.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed font-serif-italic border-l-4 border-gold pl-6 py-2 bg-cream/50 rounded-r-lg">
-                "We don't just feed bodies; we nourish hope and empower futures."
+                "We don't just feed people; we nourish hope and empower futures."
               </p>
             </motion.div>
             <motion.div 

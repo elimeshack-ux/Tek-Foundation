@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Heart, Users, Handshake, Utensils, Sprout, Globe } from 'lucide-react';
 import SEO from '../components/SEO';
 import { blogPosts } from '../data/blogPosts';
+import CountUp from '../components/ui/CountUp';
 
 const Home = () => {
   const fadeInUp = {
@@ -165,10 +166,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-12">
             {[
-              { number: "5,000+", label: "Meals Served" },
-              { number: "20+", label: "Communities Reached" },
-              { number: "100+", label: "Active Volunteers" },
-              { number: "50+", label: "Corporate Partners" }
+              { number: 5000, suffix: "+", label: "Meals Served" },
+              { number: 20, suffix: "+", label: "Communities Reached" },
+              { number: 100, suffix: "+", label: "Active Volunteers" },
+              { number: 50, suffix: "+", label: "Corporate Partners" }
             ].map((stat, index) => (
               <motion.div 
                 key={index}
@@ -177,7 +178,9 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="font-heading font-bold text-4xl md:text-5xl text-gold mb-2">{stat.number}</div>
+                <div className="font-heading font-bold text-4xl md:text-5xl text-gold mb-2 flex justify-center items-center">
+                  <CountUp to={stat.number} />{stat.suffix}
+                </div>
                 <div className="text-sm md:text-base font-medium opacity-90">{stat.label}</div>
               </motion.div>
             ))}
