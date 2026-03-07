@@ -48,14 +48,14 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
+      <h1 style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}}>TEK Foundation — Fighting Hunger & Food Insecurity in Nigeria</h1>
       <SEO 
         title="TEK Foundation | Fighting Hunger & Poverty in Nigeria"
-        description="TEK Foundation is a Lagos-based NGO providing food packages, community outreach, and sustainable solutions to tackle food insecurity across Nigeria."
+        description="TEK Foundation is a Lagos-based NGO providing monthly food packages, community outreach, and sustainable solutions to tackle food insecurity across Nigeria. Join us in building a hunger-free Nigeria."
         canonical="https://www.tekfoundation.org/"
         schema={orgSchema}
       />
-      <h1 className="seo-h1">TEK Foundation — Fighting Hunger & Food Insecurity in Nigeria</h1>
-
+      {/* 1. HERO SECTION */}
       <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-white">
         <div className="absolute inset-0 z-0">
           <img 
@@ -68,20 +68,20 @@ const Home = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.h2 
+          <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 leading-tight max-w-5xl mx-auto"
+            className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 leading-tight"
           >
-            Tackling Poverty & Food Insecurity in Nigeria
-          </motion.h2>
+            Tackling Poverty & <br/>Food Insecurity in Nigeria
+          </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base md:text-lg lg:text-xl mb-8 max-w-3xl mx-auto font-light px-4"
+            className="text-base md:text-xl mb-8 max-w-3xl mx-auto font-light"
           >
             Every family deserves dignified access to food. Join us in building a Nigeria where no one goes hungry.
           </motion.p>
@@ -119,6 +119,7 @@ const Home = () => {
         </motion.div>
       </section>
 
+      {/* 2. MISSION SECTION */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -136,7 +137,7 @@ const Home = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {[
               { icon: Utensils, title: "Provide Meals", desc: "Ensuring no family goes to bed hungry through direct food assistance." },
@@ -162,6 +163,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 3. IMPACT STATISTICS SECTION */}
       <section className="py-20 bg-forest text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-12">
@@ -196,6 +198,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 4. PROGRAMS SECTION */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -203,7 +206,7 @@ const Home = () => {
             <div className="w-20 h-1 bg-gold mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
                 title: "Food Distribution", 
@@ -250,52 +253,8 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 5. LATEST STORIES SECTION */}
       <section className="py-20 bg-cream">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-forest mb-6 text-center">Who We Are</h2>
-            <div className="w-20 h-1 bg-gold rounded-full mx-auto mb-10"></div>
-            
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p>
-                TEK Foundation is a Nigerian non-governmental organisation 
-                dedicated to one mission: ensuring that no family in Nigeria 
-                goes to bed hungry.
-              </p>
-              <p>
-                Founded on the belief that every person deserves dignified 
-                access to food, we work in underserved communities across 
-                Lagos — delivering monthly food packages, running on-the-ground 
-                outreach programmes, and building sustainable solutions that 
-                empower communities to achieve lasting food security.
-              </p>
-              <p>
-                Nigeria is home to over 25 million food-insecure people. 
-                Behind that number are real families — mothers rationing 
-                their last cup of rice, children going to school on empty 
-                stomachs, elderly men and women depending on the kindness 
-                of neighbours to survive. TEK Foundation exists to close 
-                the gap between the scale of this crisis and the response 
-                it deserves.
-              </p>
-              <p>
-                We believe that how you give matters as much as what you give. 
-                Every food package we distribute is delivered with dignity, 
-                compassion, and the firm conviction that the people we serve 
-                are not beneficiaries — they are neighbours, community members, 
-                and the reason we show up every single week.
-              </p>
-              <p className="font-bold text-forest">
-                Whether you are here to donate, volunteer, explore a 
-                partnership, or simply learn more — welcome. Together, 
-                we are building a hunger-free Nigeria.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -307,7 +266,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {latestPosts.map((post) => (
               <motion.div 
                 key={post.id}
@@ -349,6 +308,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 6. CALL-TO-ACTION SECTION */}
       <section className="py-24 bg-forest text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pattern-dots"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -398,6 +358,10 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      <div style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}} aria-hidden="true">
+        TEK Foundation is a Nigerian non-governmental organisation dedicated to tackling poverty and food insecurity in Nigeria. Based in Lagos, we operate monthly food distribution outreaches that deliver nutritious food packages directly to vulnerable families in underserved communities. Our work is built on three pillars: providing meals and sustainable solutions, tackling poverty and food insecurity, and empowering communities through accountable systems. We serve families in communities across Lagos including Ajegunle, Mushin, Makoko, and beyond. Over 25 million Nigerians are at risk of acute food insecurity. TEK Foundation exists to close the gap between need and response — one family, one meal, one community at a time. Whether you are looking to donate, volunteer, or partner with us as a corporate sponsor fulfilling your CSR mandate, TEK Foundation welcomes you. Together we can build a Nigeria where no family goes to bed hungry. Follow us on Instagram at tek_foundation and on LinkedIn at TEK Foundation for regular updates, impact stories, and community news.
+      </div>
     </div>
   );
 };

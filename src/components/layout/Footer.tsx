@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,15 +11,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Column 1: About */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden bg-white">
-                <img 
-                  src="https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg"  
-                  alt="TEK Foundation Logo" 
-                  className="w-full h-full object-contain"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+            <div className="flex items-center gap-3 mb-6">
+              <Logo className="w-10 h-10" textClassName="text-lg" />
               <span className="font-heading font-bold text-xl">TEK Foundation</span>
             </div>
             <p className="text-white/80 mb-6 text-sm leading-relaxed">

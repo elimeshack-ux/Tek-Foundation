@@ -4,6 +4,8 @@ import { Menu, X, Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 
+import Logo from '@/components/ui/Logo';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -39,22 +41,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 z-50">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden bg-white">
-            <img 
-              src="https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg" 
-              alt="TEK Foundation Logo" 
-              className="w-full h-full object-contain"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-          <span className={cn("font-heading font-bold text-xl lg:text-2xl", scrolled ? "text-forest" : "text-white")}>
+        <Link to="/" className="flex items-center gap-3 z-50">
+          <Logo className="w-10 h-10" textClassName="text-lg" />
+          <span className={cn("font-heading font-bold text-xl md:text-2xl", scrolled ? "text-forest" : "text-white")}>
             TEK Foundation
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -80,7 +75,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden z-50 text-gold"
+          className="md:hidden z-50 text-gold"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -94,7 +89,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="fixed inset-0 bg-forest/95 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-8 lg:hidden"
+              className="fixed inset-0 bg-forest/95 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-8 md:hidden"
             >
               {navLinks.map((link) => (
                 <Link

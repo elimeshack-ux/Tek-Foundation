@@ -4,6 +4,7 @@ import { Calendar, Clock, User, ArrowLeft, Share2, Facebook, Twitter, Linkedin }
 import SEO from '../components/SEO';
 import { blogPosts } from '../data/blogPosts';
 import { useEffect } from 'react';
+import Logo from '@/components/ui/Logo';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -142,9 +143,7 @@ const BlogPost = () => {
 
           {/* Author Bio */}
           <div className="bg-cream p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
-            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
-              <img src="https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg" alt="TEK Foundation" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
-            </div>
+            <Logo className="w-20 h-20 shrink-0 shadow-sm" textClassName="text-2xl" />
             <div>
               <h3 className="font-heading font-bold text-xl text-deep-green mb-2">About TEK Foundation</h3>
               <p className="text-gray-600">

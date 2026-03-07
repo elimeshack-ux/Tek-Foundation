@@ -5,9 +5,10 @@ import SEO from '../components/SEO';
 const Contact = () => {
   return (
     <div className="pt-20">
+      <h1 style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}}>Contact TEK Foundation — Donate, Volunteer or Partner With Us</h1>
       <SEO 
         title="Contact TEK Foundation | Partner, Volunteer or Donate"
-        description="Get in touch with TEK Foundation to donate, volunteer, or explore partnership opportunities. Together, we can build a hunger-free Nigeria."
+        description="Get in touch with TEK Foundation to donate, volunteer, or explore partnership opportunities. Together we can build a hunger-free Nigeria."
         canonical="https://www.tekfoundation.org/contact"
       />
       {/* HERO SECTION */}

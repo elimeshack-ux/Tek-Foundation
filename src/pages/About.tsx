@@ -6,9 +6,10 @@ import SEO from '../components/SEO';
 const About = () => {
   return (
     <div className="pt-20">
+      <h1 style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}}>About TEK Foundation — Our Mission, Vision and Team</h1>
       <SEO 
         title="About TEK Foundation | Our Mission, Vision & Team"
-        description="Learn about TEK Foundation — a Nigerian NGO dedicated to ending hunger through dignified food access, community empowerment, and sustainable development."
+        description="Learn about TEK Foundation — a Nigerian NGO dedicated to ending hunger through dignified food access, community empowerment, and sustainable development across Lagos and beyond."
         canonical="https://www.tekfoundation.org/about"
       />
       {/* HERO SECTION */}
