@@ -72,16 +72,16 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 leading-tight"
+            className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 leading-tight max-w-5xl mx-auto"
           >
-            Tackling Poverty & <br />Food Insecurity in Nigeria
+            Tackling Poverty & Food Insecurity in Nigeria
           </motion.h2>
           
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base md:text-xl mb-8 max-w-3xl mx-auto font-light"
+            className="text-base md:text-lg lg:text-xl mb-8 max-w-3xl mx-auto font-light px-4"
           >
             Every family deserves dignified access to food. Join us in building a Nigeria where no one goes hungry.
           </motion.p>
