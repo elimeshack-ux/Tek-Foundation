@@ -48,13 +48,13 @@ const Navbar = () => {
               referrerPolicy="no-referrer"
             />
           </div>
-          <span className={cn("font-heading font-bold text-xl md:text-2xl", scrolled ? "text-forest" : "text-white")}>
+          <span className={cn("font-heading font-bold text-xl lg:text-2xl", scrolled ? "text-forest" : "text-white")}>
             TEK Foundation
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -80,7 +80,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden z-50 text-gold"
+          className="lg:hidden z-50 text-gold"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -94,7 +94,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="fixed inset-0 bg-forest/95 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-8 md:hidden"
+              className="fixed inset-0 bg-forest/95 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-8 lg:hidden"
             >
               {navLinks.map((link) => (
                 <Link
