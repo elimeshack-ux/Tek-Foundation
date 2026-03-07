@@ -18,7 +18,7 @@ const GALLERY_IMAGES = [
 const OurWork = () => {
   return (
     <div className="pt-20">
-      <h1 style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}}>Our Work — Food Distribution, Community Outreach and Sustainable Solutions</h1>
+      <h1 className="visually-hidden-important">Our Work — Food Distribution, Community Outreach and Sustainable Solutions</h1>
       <SEO 
         title="Our Work | Food Distribution, Outreach & Empowerment | TEK Foundation"
         description="From monthly food distributions to community outreach programs, discover how TEK Foundation creates lasting impact in underserved communities across Nigeria."

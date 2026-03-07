@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 const About = () => {
   return (
     <div className="pt-20">
-      <h1 style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}}>About TEK Foundation — Our Mission, Vision and Team</h1>
+      <h1 className="visually-hidden-important">About TEK Foundation — Our Mission, Vision and Team</h1>
       <SEO 
         title="About TEK Foundation | Our Mission, Vision & Team"
         description="Learn about TEK Foundation — a Nigerian NGO dedicated to ending hunger through dignified food access, community empowerment, and sustainable development across Lagos and beyond."
@@ -166,7 +166,7 @@ const About = () => {
                   src={`https://picsum.photos/seed/person${member}/400/400`} 
                   alt="Team Member" 
                   referrerPolicy="no-referrer"
-                  className="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-64 object-cover transition-all duration-500"
                 />
                 <div className="p-6 text-center">
                   <h3 className="font-heading font-bold text-xl mb-1">Team Member {member}</h3>

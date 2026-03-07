@@ -14,7 +14,7 @@ const News = () => {
 
   return (
     <div className="pt-20">
-      <h1 style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}}>News and Stories — Impact Stories and Articles from TEK Foundation</h1>
+      <h1 className="visually-hidden-important">News and Stories — Impact Stories and Articles from TEK Foundation</h1>
       <SEO 
         title="News & Stories | Impact Stories & Articles | TEK Foundation"
         description="Read the latest impact stories, articles, and updates from TEK Foundation — Nigeria's community-driven NGO fighting hunger and poverty one family at a time."

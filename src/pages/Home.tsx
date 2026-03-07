@@ -48,7 +48,7 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      <h1 style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}}>TEK Foundation — Fighting Hunger & Food Insecurity in Nigeria</h1>
+      <h1 className="visually-hidden-important">TEK Foundation — Fighting Hunger & Food Insecurity in Nigeria</h1>
       <SEO 
         title="TEK Foundation | Fighting Hunger & Poverty in Nigeria"
         description="TEK Foundation is a Lagos-based NGO providing monthly food packages, community outreach, and sustainable solutions to tackle food insecurity across Nigeria. Join us in building a hunger-free Nigeria."
@@ -359,7 +359,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div style={{position:'absolute', width:'1px', height:'1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap'}} aria-hidden="true">
+      <div className="visually-hidden-important" aria-hidden="true">
         TEK Foundation is a Nigerian non-governmental organisation dedicated to tackling poverty and food insecurity in Nigeria. Based in Lagos, we operate monthly food distribution outreaches that deliver nutritious food packages directly to vulnerable families in underserved communities. Our work is built on three pillars: providing meals and sustainable solutions, tackling poverty and food insecurity, and empowering communities through accountable systems. We serve families in communities across Lagos including Ajegunle, Mushin, Makoko, and beyond. Over 25 million Nigerians are at risk of acute food insecurity. TEK Foundation exists to close the gap between need and response — one family, one meal, one community at a time. Whether you are looking to donate, volunteer, or partner with us as a corporate sponsor fulfilling your CSR mandate, TEK Foundation welcomes you. Together we can build a Nigeria where no family goes to bed hungry. Follow us on Instagram at tek_foundation and on LinkedIn at TEK Foundation for regular updates, impact stories, and community news.
       </div>
     </div>

@@ -47,6 +47,7 @@ const GetInvolved = () => {
 
   return (
     <div className="pt-20">
+      <h1 className="visually-hidden-important">Get Involved with TEK Foundation — Donate, Volunteer and Partner</h1>
       <SEO 
         title="Get Involved | Donate, Volunteer & Partner | TEK Foundation"
         description="Join TEK Foundation in the fight against hunger. Donate, volunteer, or partner with us to make a tangible difference in Nigeria."
