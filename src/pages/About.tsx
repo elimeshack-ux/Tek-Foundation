@@ -17,6 +17,7 @@ const About = () => {
           <img 
             src="https://lh3.googleusercontent.com/d/1OLhI0vN_5rqjwONl1iYk7S8Spd9Kq-cq" 
             alt="TEK Foundation Team" 
+            referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-[center_25%]"
           />
           <div className="absolute inset-0 bg-forest/80 mix-blend-multiply"></div>
@@ -62,6 +63,7 @@ const About = () => {
               <img 
                 src="https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg" 
                 alt="Our founding story" 
+                referrerPolicy="no-referrer"
                 className="rounded-2xl shadow-xl relative z-10 w-full"
               />
             </motion.div>
@@ -162,6 +164,7 @@ const About = () => {
                 <img 
                   src={`https://picsum.photos/seed/person${member}/400/400`} 
                   alt="Team Member" 
+                  referrerPolicy="no-referrer"
                   className="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="p-6 text-center">
@@ -180,12 +183,15 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-forest mb-12">Our Partners</h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            {[1, 2, 3, 4].map((partner) => (
-              <div key={partner} className="flex items-center justify-center p-8 border border-gray-100 rounded-xl">
-                <div className="text-2xl font-bold text-gray-400">PARTNER LOGO</div>
-              </div>
-            ))}
+          <div className="flex justify-center mb-12">
+            <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
+              <img 
+                src="https://lh3.googleusercontent.com/d/1UrtcWIZjTjp7PJNE8kaXczNmGbXjdbfy" 
+                alt="ZenithPro Energy Ltd" 
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+              />
+            </div>
           </div>
 
           <Link to="/contact" className="inline-flex items-center justify-center px-8 py-3 border-2 border-forest text-forest font-bold rounded-full hover:bg-forest hover:text-white transition-colors">

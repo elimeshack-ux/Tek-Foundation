@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden bg-white">
                 <img 
-                  src="https://drive.google.com/thumbnail?id=1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg&sz=w200" 
+                  src="https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg"  
                   alt="TEK Foundation Logo" 
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"

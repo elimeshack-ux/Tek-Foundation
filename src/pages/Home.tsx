@@ -55,11 +55,12 @@ const Home = () => {
         schema={orgSchema}
       />
       {/* 1. HERO SECTION */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center text-white">
+      <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-white">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://picsum.photos/seed/community/1920/1080?blur=2" 
             alt="Community food distribution" 
+            referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -70,7 +71,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight"
+            className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 leading-tight"
           >
             Tackling Poverty & <br/>Food Insecurity in Nigeria
           </motion.h1>
@@ -79,7 +80,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-2xl mb-10 max-w-3xl mx-auto font-light"
+            className="text-base md:text-xl mb-8 max-w-3xl mx-auto font-light"
           >
             Every family deserves dignified access to food. Join us in building a Nigeria where no one goes hungry.
           </motion.p>
@@ -178,7 +179,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="font-heading font-bold text-4xl md:text-5xl text-gold mb-2 flex justify-center items-center">
+                <div className="font-heading font-bold text-3xl md:text-4xl text-gold mb-2 flex justify-center items-center">
                   <CountUp to={stat.number} />{stat.suffix}
                 </div>
                 <div className="text-sm md:text-base font-medium opacity-90">{stat.label}</div>
@@ -234,6 +235,7 @@ const Home = () => {
                   <img 
                     src={program.image} 
                     alt={program.title} 
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
@@ -277,6 +279,7 @@ const Home = () => {
                   <img 
                     src={post.featuredImage} 
                     alt={post.imageAlt} 
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </Link>

@@ -4,6 +4,17 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 import CountUp from '../components/ui/CountUp';
 
+const GALLERY_IMAGES = [
+  "https://lh3.googleusercontent.com/d/1OHiRj6NiUgblDmUbk5NVfhb5ewslR5V3",
+  "https://lh3.googleusercontent.com/d/1Q557IGIqOfiza7ezixBVCns7we9VDn_b",
+  "https://lh3.googleusercontent.com/d/1Fhhp2-HB8b4Skzv7ktqHfcyZ2wl9KgvO",
+  "https://lh3.googleusercontent.com/d/1ydenDohOX9FLtbN5Ix8D3JNAuvwFa2bn",
+  "https://lh3.googleusercontent.com/d/19-mvgdSSZs59cVeUwvNi7fjkySRTgKA2",
+  "https://lh3.googleusercontent.com/d/1txe-T6lFEmqZD_b0TkBCQMAMntEcPrFK",
+  "https://lh3.googleusercontent.com/d/1n-lzmoWQb8fiiYT5fxRFFzjaLcqrAtcd",
+  "https://lh3.googleusercontent.com/d/1svG-yehYtVYjDrCnTpGjGIPrLyjSXzl-"
+];
+
 const OurWork = () => {
   return (
     <div className="pt-20">
@@ -73,7 +84,7 @@ const OurWork = () => {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <img src="https://lh3.googleusercontent.com/d/1LIMKgTBXm8S0boxTc-77ktmVGw427A9t" alt="Food Distribution" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img src="https://lh3.googleusercontent.com/d/1LIMKgTBXm8S0boxTc-77ktmVGw427A9t" alt="Food Distribution" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
           </div>
 
@@ -84,7 +95,7 @@ const OurWork = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <img src="https://lh3.googleusercontent.com/d/1QA5wXpWrQU7K_JPNEmksXtVhDFGFMIWy" alt="Community Outreach" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img src="https://lh3.googleusercontent.com/d/1QA5wXpWrQU7K_JPNEmksXtVhDFGFMIWy" alt="Community Outreach" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
@@ -153,7 +164,7 @@ const OurWork = () => {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <img src="https://lh3.googleusercontent.com/d/1svG-yehYtVYjDrCnTpGjGIPrLyjSXzl-" alt="Sustainable Solutions" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img src="https://lh3.googleusercontent.com/d/1svG-yehYtVYjDrCnTpGjGIPrLyjSXzl-" alt="Sustainable Solutions" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
           </div>
         </div>
@@ -179,7 +190,7 @@ const OurWork = () => {
                   "The food package came just when I had lost all hope. TEK Foundation didn't just give me food; they gave me the strength to keep going for my children."
                 </p>
                 <div className="flex items-center gap-4">
-                  <img src={`https://picsum.photos/seed/face${story}/100/100`} alt="Beneficiary" className="w-12 h-12 rounded-full object-cover" />
+                  <img src={`https://picsum.photos/seed/face${story}/100/100`} alt="Beneficiary" referrerPolicy="no-referrer" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <h4 className="font-bold text-deep-green">Mrs. Adebayo</h4>
                     <p className="text-xs text-gray-500 uppercase">Beneficiary, Lagos</p>
@@ -200,20 +211,11 @@ const OurWork = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              "https://lh3.googleusercontent.com/d/1OHiRj6NiUgblDmUbk5NVfhb5ewslR5V3",
-              "https://lh3.googleusercontent.com/d/1Q557IGIqOfiza7ezixBVCns7we9VDn_b",
-              "https://lh3.googleusercontent.com/d/1Fhhp2-HB8b4Skzv7ktqHfcyZ2wl9KgvO",
-              "https://lh3.googleusercontent.com/d/1ydenDohOX9FLtbN5Ix8D3JNAuvwFa2bn",
-              "https://lh3.googleusercontent.com/d/19-mvgdSSZs59cVeUwvNi7fjkySRTgKA2",
-              "https://lh3.googleusercontent.com/d/1txe-T6lFEmqZD_b0TkBCQMAMntEcPrFK",
-              "https://lh3.googleusercontent.com/d/1n-lzmoWQb8fiiYT5fxRFFzjaLcqrAtcd",
-              "https://lh3.googleusercontent.com/d/1svG-yehYtVYjDrCnTpGjGIPrLyjSXzl-"
-            ].map((imgUrl, index) => (
+            {GALLERY_IMAGES.map((imgUrl, index) => (
               <motion.div 
                 key={index}
                 whileHover={{ scale: 1.02 }}
-                className={`rounded-xl overflow-hidden shadow-sm cursor-pointer ${
+                className={`rounded-xl overflow-hidden shadow-sm ${
                   index === 0 || index === 7 
                     ? 'col-span-2 row-span-2 h-[25rem] md:h-[33rem]' 
                     : 'col-span-1 row-span-1 h-48 md:h-64'
@@ -222,6 +224,7 @@ const OurWork = () => {
                 <img 
                   src={imgUrl} 
                   alt={`Gallery image ${index + 1}`} 
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover hover:opacity-90 transition-opacity"
                 />
               </motion.div>

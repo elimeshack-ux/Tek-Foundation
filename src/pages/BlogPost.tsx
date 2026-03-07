@@ -109,6 +109,7 @@ const BlogPost = () => {
             <img 
               src={post.featuredImage} 
               alt={post.imageAlt} 
+              referrerPolicy="no-referrer"
               className="w-full h-[300px] md:h-[500px] object-cover"
             />
           </motion.div>
@@ -142,7 +143,7 @@ const BlogPost = () => {
           {/* Author Bio */}
           <div className="bg-cream p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
-              <img src="https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg" alt="TEK Foundation" className="w-full h-full object-cover" />
+              <img src="https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg" alt="TEK Foundation" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
             </div>
             <div>
               <h3 className="font-heading font-bold text-xl text-deep-green mb-2">About TEK Foundation</h3>
@@ -184,6 +185,7 @@ const BlogPost = () => {
                         <img 
                           src={article.featuredImage} 
                           alt={article.imageAlt} 
+                          referrerPolicy="no-referrer"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
