@@ -184,11 +184,19 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-forest mb-12">Our Partners</h2>
           
-          <div className="flex justify-center mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center mb-12">
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
               <img 
                 src="https://lh3.googleusercontent.com/d/1UrtcWIZjTjp7PJNE8kaXczNmGbXjdbfy" 
                 alt="ZenithPro Energy Ltd" 
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
+              <img 
+                src="https://lh3.googleusercontent.com/d/1rr_yYegONg0WxiG8QEQgixLpqIhAkgSG" 
+                alt="Partner" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
               />
