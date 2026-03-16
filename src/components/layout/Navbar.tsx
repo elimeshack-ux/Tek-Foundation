@@ -42,7 +42,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 z-50">
-          <Logo className="w-10 h-10" textClassName="text-lg" />
+          <img 
+            src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
+            alt="TEK Foundation Logo" 
+            className="transparent-logo object-contain"
+            style={{ height: '60px', width: 'auto' }}
+            referrerPolicy="no-referrer"
+          />
           <span className={cn("font-heading font-bold text-xl md:text-2xl", scrolled ? "text-forest" : "text-white")}>
             TEK Foundation
           </span>

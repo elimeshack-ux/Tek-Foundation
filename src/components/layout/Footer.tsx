@@ -12,7 +12,13 @@ const Footer = () => {
           {/* Column 1: About */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <Logo className="w-10 h-10" textClassName="text-lg" />
+              <img 
+                src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
+                alt="TEK Foundation Logo" 
+                className="transparent-logo object-contain"
+                style={{ height: '80px', width: 'auto' }}
+                referrerPolicy="no-referrer"
+              />
               <span className="font-heading font-bold text-xl">TEK Foundation</span>
             </div>
             <p className="text-white/80 mb-6 text-sm leading-relaxed">

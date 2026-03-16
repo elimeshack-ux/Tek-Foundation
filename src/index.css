@@ -34,6 +34,11 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
 }
 
+.transparent-logo {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
 .visually-hidden-important {
   position: absolute !important;
   width: 1px !important;

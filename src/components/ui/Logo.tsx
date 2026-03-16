@@ -9,9 +9,9 @@ interface LogoProps {
 const Logo = ({ className, textClassName }: LogoProps) => {
   const [imageError, setImageError] = useState(false);
   
-  // The user provided Google Drive link ID: 1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg
+  // The user provided Google Drive link ID: 1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9
   // We try to use the direct download link format
-  const logoUrl = "https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg";
+  const logoUrl = "https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9";
 
   if (!imageError) {
     return (

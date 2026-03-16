@@ -145,14 +145,13 @@ const Checkout = () => {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden bg-white">
-              <img 
-                src="https://drive.google.com/thumbnail?id=1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg&sz=w200" 
-                alt="TEK Foundation Logo" 
-                className="w-full h-full object-contain"
-                referrerPolicy="no-referrer"
-              />
-            </div>
+            <img 
+              src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
+              alt="TEK Foundation Logo" 
+              className="transparent-logo object-contain"
+              style={{ height: '60px', width: 'auto' }}
+              referrerPolicy="no-referrer"
+            />
             <span className="font-heading font-bold text-lg md:text-xl text-[#2D5A3D]">TEK Foundation</span>
           </Link>
           
