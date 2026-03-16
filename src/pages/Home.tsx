@@ -59,7 +59,7 @@ const Home = () => {
       <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-white">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://picsum.photos/seed/community/1920/1080?blur=2" 
+            src="https://lh3.googleusercontent.com/d/1rEhjJGgOBPur6CtSVQ_HpEXyKVlr3Rui" 
             alt="Community food distribution" 
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
