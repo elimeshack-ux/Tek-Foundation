@@ -149,7 +149,7 @@ const Checkout = () => {
               src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
               alt="TEK Foundation Logo" 
               className="transparent-logo object-contain"
-              style={{ height: '60px', width: 'auto' }}
+              style={{ height: '80px', width: 'auto' }}
               referrerPolicy="no-referrer"
             />
             <span className="font-heading font-bold text-lg md:text-xl text-[#2D5A3D]">TEK Foundation</span>

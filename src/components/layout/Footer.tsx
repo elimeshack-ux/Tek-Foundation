@@ -16,7 +16,7 @@ const Footer = () => {
                 src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
                 alt="TEK Foundation Logo" 
                 className="transparent-logo object-contain"
-                style={{ height: '80px', width: 'auto' }}
+                style={{ height: '100px', width: 'auto' }}
                 referrerPolicy="no-referrer"
               />
               <span className="font-heading font-bold text-xl">TEK Foundation</span>

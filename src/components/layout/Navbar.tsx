@@ -46,7 +46,7 @@ const Navbar = () => {
             src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
             alt="TEK Foundation Logo" 
             className="transparent-logo object-contain"
-            style={{ height: '60px', width: 'auto' }}
+            style={{ height: '80px', width: 'auto' }}
             referrerPolicy="no-referrer"
           />
           <span className={cn("font-heading font-bold text-xl md:text-2xl", scrolled ? "text-forest" : "text-white")}>
