@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import confetti from 'canvas-confetti';
-import { CheckCircle, ArrowRight, Download, Share2, X, Link as LinkIcon, Twitter } from 'lucide-react';
+import { CheckCircle, ArrowRight, Download, Share2, X, Link as LinkIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { jsPDF } from 'jspdf';
+import XIcon from '../components/ui/XIcon';
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
@@ -219,10 +220,10 @@ const DonationSuccess = () => {
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#1DA1F2] hover:bg-[#1a91da] text-white p-4 rounded-xl flex flex-col items-center gap-3 transition-all hover:scale-105 shadow-sm"
+                  className="bg-black hover:bg-gray-800 text-white p-4 rounded-xl flex flex-col items-center gap-3 transition-all hover:scale-105 shadow-sm"
                 >
-                  <Twitter size={24} />
-                  <span className="font-medium">Twitter</span>
+                  <XIcon size={24} />
+                  <span className="font-medium">X (Twitter)</span>
                 </a>
 
                 <button 

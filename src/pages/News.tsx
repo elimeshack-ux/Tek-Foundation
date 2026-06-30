@@ -53,7 +53,7 @@ const News = () => {
             <div className="lg:col-span-3">
               {/* Featured Post */}
               {featuredPost && (
-                <Link to={`/blog/${featuredPost.slug}`} className="block mb-12 group cursor-pointer">
+                <Link to={`/news/${featuredPost.slug}`} className="block mb-12 group cursor-pointer">
                   <div className="rounded-2xl overflow-hidden shadow-lg mb-6 relative">
                     <img 
                       src={featuredPost.featuredImage} 
@@ -84,7 +84,7 @@ const News = () => {
               {/* Blog Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 {otherPosts.map((post) => (
-                  <Link key={post.id} to={`/blog/${post.slug}`} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer border border-gray-100 block">
+                  <Link key={post.id} to={`/news/${post.slug}`} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer border border-gray-100 block">
                     <div className="h-48 overflow-hidden">
                       <img 
                         src={post.featuredImage} 
@@ -145,6 +145,26 @@ const News = () => {
           </div>
         )}
       </div>
+
+      {/* UPCOMING EVENTS SECTION */}
+      <section id="events" className="py-20 bg-cream">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-forest mb-4">Upcoming Events</h2>
+            <div className="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+          </div>
+          <div className="max-w-md mx-auto">
+            <div className="relative group bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer h-48 flex flex-col justify-center items-center p-6 text-center">
+              <h3 className="font-heading font-bold text-2xl text-deep-green mb-2 group-hover:opacity-0 transition-opacity duration-300">Project Excel Her Initiative</h3>
+              <p className="text-gray-600 group-hover:opacity-0 transition-opacity duration-300">Empowering women through skills acquisition and entrepreneurship training.</p>
+              
+              <div className="absolute inset-0 bg-forest flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-heading font-bold text-2xl tracking-widest uppercase">Coming Soon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

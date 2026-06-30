@@ -45,7 +45,7 @@ const BlogPost = () => {
     "datePublished": post.publishDate,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://www.tekfoundation.org/blog/${post.slug}`
+      "@id": `https://www.tekfoundation.org/news/${post.slug}`
     }
   };
 
@@ -57,9 +57,9 @@ const BlogPost = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title={`${post.title} | TEK Foundation`}
+        title={post.pageTitle || `${post.title} | TEK Foundation`}
         description={post.metaDescription}
-        canonical={`https://www.tekfoundation.org/blog/${post.slug}`}
+        canonical={`https://www.tekfoundation.org/news/${post.slug}`}
         ogType="article"
         ogImage={post.featuredImage}
         schema={articleSchema}
@@ -178,7 +178,7 @@ const BlogPost = () => {
               <h2 className="font-heading font-bold text-3xl text-deep-green mb-10 text-center">Related Stories</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {relatedArticles.map(article => (
-                  <Link key={article.id} to={`/blog/${article.slug}`} className="group block">
+                  <Link key={article.id} to={`/news/${article.slug}`} className="group block">
                     <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 h-full flex flex-col">
                       <div className="h-48 overflow-hidden">
                         <img 

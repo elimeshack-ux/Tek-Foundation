@@ -13,22 +13,23 @@ const About = () => {
         canonical="https://www.tekfoundation.org/about"
       />
       {/* HERO SECTION */}
-      <section className="relative h-[400px] flex items-center justify-center text-white">
+      <section className="relative h-[400px] flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://lh3.googleusercontent.com/d/1OLhI0vN_5rqjwONl1iYk7S8Spd9Kq-cq" 
             alt="TEK Foundation Team" 
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-[center_25%]"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 32%', transform: 'scale(1.1)', transformOrigin: 'center 32%' }}
           />
-          <div className="absolute inset-0 bg-forest/80 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-deep-green/60"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="font-heading font-bold text-4xl md:text-6xl mb-4">About TEK Foundation</h1>
-          <div className="flex justify-center items-center gap-2 text-white/80 text-sm font-semibold uppercase tracking-wider">
-            <span>Home</span>
-            <span>&gt;</span>
-            <span className="text-gold">About Us</span>
+          <div className="flex justify-center items-center gap-2 text-white/80 text-sm font-semibold tracking-wider">
+            <span style={{ color: 'white' }}>Our story.</span>
+            <span style={{ color: '#F4C542' }}>Our mission.</span>
+            <span style={{ color: 'white' }}>Our people.</span>
           </div>
         </div>
       </section>
@@ -76,26 +77,7 @@ const About = () => {
       <section className="py-20 bg-cream">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white p-10 rounded-2xl shadow-md border-t-4 border-forest"
-            >
-              <div className="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mb-6 text-forest">
-                <Leaf size={32} />
-              </div>
-              <h3 className="font-heading font-bold text-2xl text-deep-green mb-4">Our Mission</h3>
-              <p className="text-gray-700 leading-relaxed">
-                TEK Foundation is dedicated to tackling poverty and food insecurity in Nigeria by expanding dignified access to food and empowerment through accountable systems and strategic partnerships.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+            <div 
               className="bg-white p-10 rounded-2xl shadow-md border-t-4 border-gold"
             >
               <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mb-6 text-gold">
@@ -103,9 +85,21 @@ const About = () => {
               </div>
               <h3 className="font-heading font-bold text-2xl text-deep-green mb-4">Our Vision</h3>
               <p className="text-gray-700 leading-relaxed">
-                A Nigeria where every individual has dignified access to nutritious food and the opportunity to thrive, free from the constraints of poverty and hunger.
+                To build trusted, scalable hunger-response and empowerment infrastructure across Africa, ensuring that no individual is trapped by hunger or economic vulnerability.
               </p>
-            </motion.div>
+            </div>
+
+            <div 
+              className="bg-white p-10 rounded-2xl shadow-md border-t-4 border-forest"
+            >
+              <div className="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mb-6 text-forest">
+                <Leaf size={32} />
+              </div>
+              <h3 className="font-heading font-bold text-2xl text-deep-green mb-4">Our Mission</h3>
+              <p className="text-gray-700 leading-relaxed">
+                To provide structured, dignified access to food and empowerment opportunities for underserved individuals through accountable systems and strategic partnerships.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -120,18 +114,14 @@ const About = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
-              { icon: Heart, title: "Compassion", desc: "We serve with empathy and kindness." },
-              { icon: ShieldCheck, title: "Accountability", desc: "We are transparent in all our actions." },
-              { icon: Leaf, title: "Sustainability", desc: "We build long-term solutions." },
-              { icon: Users, title: "Collaboration", desc: "We work together for greater impact." },
-              { icon: Star, title: "Excellence", desc: "We strive for the highest standards." }
+              { icon: Heart, title: "Dignity First", desc: "We protect the identity and privacy of beneficiaries." },
+              { icon: ShieldCheck, title: "Accountability", desc: "Every intervention is trackable and measurable." },
+              { icon: Leaf, title: "Sustainability Over Noise", desc: "We build systems, not seasonal charity." },
+              { icon: Users, title: "Strategic Partnerships", desc: "Collaboration drives scale." },
+              { icon: Star, title: "Impact-Driven Decisions", desc: "Data and outcomes guide growth." }
             ].map((value, index) => (
-              <motion.div 
+              <div 
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 className="text-center p-6 rounded-xl hover:bg-cream transition-colors group"
               >
                 <div className="w-14 h-14 bg-forest text-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold transition-colors shadow-md">
@@ -139,7 +129,7 @@ const About = () => {
                 </div>
                 <h3 className="font-heading font-bold text-lg text-deep-green mb-2">{value.title}</h3>
                 <p className="text-sm text-gray-600">{value.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -153,26 +143,35 @@ const About = () => {
             <div className="w-20 h-1 bg-gold mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((member) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { image: "/images/teams/team_board.jpg", title: "The Board", link: "/team/board" },
+              { image: "/images/teams/team_executive.jpg", title: "Executive Team", link: "/team/executive" },
+              { image: "/images/teams/team_programs.jpg", title: "Programs Team", link: "/team/programs" },
+              { image: "/images/teams/team_media.jpg", title: "Media & Publicity Team", link: "/team/media" },
+              { image: "/images/teams/team_product.jpg", title: "Product Team", link: "/team/product" },
+              { image: "/images/teams/team_operations.jpg", title: "Operations Team", link: "/team/operations" }
+            ].map((category, index) => (
               <motion.div 
-                key={member}
-                initial={{ opacity: 0, scale: 0.9 }}
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-gold transition-colors"
+                transition={{ delay: index * 0.1 }}
               >
-                <img 
-                  src={`https://picsum.photos/seed/person${member}/400/400`} 
-                  alt="Team Member" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-64 object-cover transition-all duration-500"
-                />
-                <div className="p-6 text-center">
-                  <h3 className="font-heading font-bold text-xl mb-1">Team Member {member}</h3>
-                  <p className="text-gold text-sm font-medium uppercase tracking-wider mb-3">Position Title</p>
-                  <p className="text-white/70 text-sm">Dedicated to making a difference in our community.</p>
-                </div>
+                <Link to={category.link} className="block group h-full">
+                  <div className="relative rounded-2xl overflow-hidden border border-white/10 group-hover:border-gold transition-all duration-300 group-hover:-translate-y-1 h-64 flex items-center justify-center text-center">
+                    <img
+                      src={category.image}
+                      alt={category.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors z-10" />
+                    <div className="relative z-20 px-6">
+                      <h3 className="font-heading font-bold text-2xl text-white">{category.title}</h3>
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -184,7 +183,7 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-forest mb-12">Our Partners</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-12">
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
               <img 
                 src="https://lh3.googleusercontent.com/d/1UrtcWIZjTjp7PJNE8kaXczNmGbXjdbfy" 
@@ -196,7 +195,15 @@ const About = () => {
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
               <img 
                 src="https://lh3.googleusercontent.com/d/1rr_yYegONg0WxiG8QEQgixLpqIhAkgSG" 
-                alt="Partner" 
+                alt="S. Efejuku & Co" 
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
+              <img 
+                src="/images/partners/lawma.png?v=2" 
+                alt="Lagos Waste Management Authority (LAWMA)" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
               />

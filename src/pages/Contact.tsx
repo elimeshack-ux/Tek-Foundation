@@ -1,8 +1,12 @@
-import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter, Send } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Send, X, CheckCircle } from 'lucide-react';
 import SEO from '../components/SEO';
+import XIcon from '../components/ui/XIcon';
 
 const Contact = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   return (
     <div className="pt-20">
       <h1 className="visually-hidden-important">Contact TEK Foundation — Donate, Volunteer or Partner With Us</h1>
@@ -53,9 +57,9 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center shrink-0 text-gold">
                     <Mail size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-bold text-deep-green text-lg mb-1">Email Us</h4>
-                    <a href="mailto:tekfoundationnigeria@gmail.com" className="text-gray-600 hover:text-gold transition-colors">tekfoundationnigeria@gmail.com</a>
+                    <a href="mailto:tekfoundationnigeria@gmail.com" className="block text-[15px] text-gray-600 hover:text-gold transition-colors truncate sm:whitespace-nowrap">tekfoundationnigeria@gmail.com</a>
                   </div>
                 </div>
 
@@ -75,7 +79,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-deep-green text-lg mb-1">Visit Us</h4>
-                    <p className="text-gray-600">Lagos, Nigeria</p>
+                    <p className="text-gray-600">44, Adebowale Street, Ojodu, Lagos</p>
                     <p className="text-sm text-gray-500 mt-1">Office Hours: Mon-Fri, 9AM-5PM WAT</p>
                   </div>
                 </div>
@@ -87,8 +91,8 @@ const Contact = () => {
                   {[
                     { icon: Instagram, link: "https://instagram.com/tek_foundation" },
                     { icon: Linkedin, link: "https://linkedin.com/company/tek-foundation" },
-                    { icon: Facebook, link: "https://facebook.com/tek_foundation" },
-                    { icon: Twitter, link: "https://twitter.com/tek_foundation" }
+                    { icon: Facebook, link: "https://web.facebook.com/tekfoundationng/" },
+                    { icon: XIcon, link: "https://x.com/Tek_foundation1" }
                   ].map((social, i) => (
                     <a 
                       key={i} 
@@ -112,27 +116,60 @@ const Contact = () => {
               className="bg-cream p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100"
             >
               <h3 className="font-heading font-bold text-2xl text-deep-green mb-6">Send a Message</h3>
-              <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert('Message sent!'); }}>
+              <form 
+                className="space-y-6"
+                action="https://formsubmit.co/ajax/tekfoundationnigeria@gmail.com"
+                method="POST"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+                  const form = e.target as HTMLFormElement;
+                  fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                  })
+                  .then(response => {
+                    if (response.ok) {
+                      setIsModalOpen(true);
+                      form.reset();
+                    } else {
+                      alert('There was a problem sending your message. Please try again.');
+                    }
+                  })
+                  .catch(() => {
+                    alert('There was a problem sending your message. Please try again.');
+                  })
+                  .finally(() => {
+                    setIsSubmitting(false);
+                  });
+                }}
+              >
+                <input type="text" name="_honey" style={{ display: 'none' }} />
+                <input type="hidden" name="_captcha" value="false" />
+                
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Full Name <span className="text-red-500">*</span></label>
-                  <input type="text" className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="John Doe" required />
+                  <input type="text" name="name" className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="John Doe" required />
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-2">Email Address <span className="text-red-500">*</span></label>
-                    <input type="email" className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="john@example.com" required />
+                    <input type="email" name="email" className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="john@example.com" required />
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
-                    <input type="tel" className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="+234..." />
+                    <input type="tel" name="phone" className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="+234..." />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Subject</label>
                   <div className="relative">
-                    <select className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all appearance-none bg-white">
+                    <select name="subject" className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all appearance-none bg-white">
                       <option>General Inquiry</option>
                       <option>Donation Support</option>
                       <option>Volunteer Opportunities</option>
@@ -148,11 +185,11 @@ const Contact = () => {
 
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Message <span className="text-red-500">*</span></label>
-                  <textarea rows={5} className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="How can we help you?" required></textarea>
+                  <textarea name="message" rows={5} className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="How can we help you?" required></textarea>
                 </div>
 
-                <button type="submit" className="w-full bg-gold hover:bg-yellow-500 text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
-                  Send Message <Send size={18} />
+                <button type="submit" disabled={isSubmitting} className="w-full bg-gold hover:bg-yellow-500 text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                  {isSubmitting ? 'Sending...' : 'Send Message'} {!isSubmitting && <Send size={18} />}
                 </button>
               </form>
             </motion.div>
@@ -178,6 +215,43 @@ const Contact = () => {
           className="grayscale hover:grayscale-0 transition-all duration-500"
         ></iframe>
       </section>
+
+      {/* SUCCESS MODAL */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl relative"
+            >
+              <button 
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <X size={24} />
+              </button>
+              
+              <div className="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-6 text-forest">
+                <CheckCircle size={32} />
+              </div>
+              
+              <h3 className="font-heading font-bold text-2xl text-deep-green mb-3">Message Sent!</h3>
+              <p className="text-gray-600 mb-8">
+                Thank you for reaching out! We'll get back to you soon.
+              </p>
+              
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="w-full bg-gold hover:bg-yellow-500 text-white font-bold py-3 rounded-xl transition-colors"
+              >
+                Close
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

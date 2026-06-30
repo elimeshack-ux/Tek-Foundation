@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
-import { Heart, ArrowRight, CheckCircle, Mail, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Heart, ArrowRight, CheckCircle, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { motion } from 'motion/react';
+import XIcon from '../components/ui/XIcon';
 
 const VolunteerSuccess = () => {
   const location = useLocation();
@@ -156,9 +157,9 @@ const VolunteerSuccess = () => {
           <div className="border-t border-gray-100 pt-6">
             <p className="text-xs text-gray-500 mb-3">While you wait, follow us for updates:</p>
             <div className="flex justify-center gap-4 mb-6">
-              <a href="https://facebook.com/tek_foundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Facebook size={20} /></a>
+              <a href="https://web.facebook.com/tekfoundationng/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Facebook size={20} /></a>
               <a href="https://instagram.com/tek_foundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Instagram size={20} /></a>
-              <a href="https://twitter.com/tek_foundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Twitter size={20} /></a>
+              <a href="https://x.com/Tek_foundation1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><XIcon size={20} /></a>
               <a href="https://linkedin.com/company/tek-foundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#2D5A3D] transition-colors"><Linkedin size={20} /></a>
             </div>
             

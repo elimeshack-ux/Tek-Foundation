@@ -1,6 +1,7 @@
 export interface BlogPost {
   id: string;
   title: string;
+  pageTitle?: string;
   slug: string;
   category: string;
   metaDescription: string;
@@ -13,6 +14,68 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "3",
+    title: "The Heroes Nobody Claps For: How TEK Foundation and LAWMA Honoured Lagos Sanitation Workers",
+    pageTitle: "Clean Street Heroes: TEK Foundation Honours LAWMA Workers",
+    slug: "clean-street-heroes-lawma-tek-foundation",
+    category: "Partnerships",
+    metaDescription: "See how TEK Foundation and LAWMA celebrated Lagos sanitation workers during Project RACK, a heartfelt random acts of kindness outreach in Surulere.",
+    publishDate: "2026-06-06",
+    featuredImage: "/images/news/clean-street-heroes.jpg",
+    imageAlt: "TEK Foundation and LAWMA team appreciating Lagos sanitation workers during Project RACK outreach in Surulere",
+    author: "TEK Foundation",
+    readTime: "4 min read",
+    content: `
+      <h2 class="text-2xl md:text-3xl font-bold text-deep-green mt-12 mb-6">Who Are the Clean Street Heroes</h2>
+      <p class="mb-6 leading-relaxed">Every morning before Lagos wakes up properly, there is somebody already on the street sweeping, picking, clearing. You probably walked past one of them this morning and did not even look twice.</p>
+      <p class="mb-6 leading-relaxed">That is exactly the problem TEK Foundation set out to fix on June 6, when we partnered with the Lagos Waste Management Authority, LAWMA, to host <a href="/our-work" class="text-gold hover:underline font-medium">Project RACK</a>, our Random Acts of Kindness initiative, at Masha and Shitta in Surulere.</p>
+      <p class="mb-8 leading-relaxed">This was not your regular outreach. This time, the spotlight was on the people who keep our streets clean every single day, yet rarely get appreciated for it. We called them what they truly are, Clean Street Heroes.</p>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-deep-green mt-12 mb-6">Inside <a href="/our-work" class="text-gold hover:underline font-medium">Project RACK</a></h2>
+      <p class="mb-6 leading-relaxed">For one day, the sanitation workers who clear our gutters, sweep our roads, and clean up after the rest of us were the ones being celebrated. Our team showed up with gifts, words of appreciation, and most importantly, genuine human connection. We sat with them. We listened to them. We said thank you in a way many of them said nobody had ever done before.</p>
+      <p class="mb-8 leading-relaxed"><a href="/our-work" class="text-gold hover:underline font-medium">Project RACK</a> is part of our larger mission to tackle poverty and food insecurity in Nigeria by building systems of dignity, not just handouts. Working alongside LAWMA on this one mattered to us because it showed what is possible when organisations come together for something bigger than themselves.</p>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-deep-green mt-12 mb-6">Why This Matters to TEK Foundation</h2>
+      <p class="mb-6 leading-relaxed">This is what TEK Foundation believes. Real change does not always come from grand gestures. Sometimes it comes from simply noticing the people the rest of the world overlooks, and treating them like the heroes they actually are.</p>
+      <p class="mb-8 leading-relaxed">To every sanitation worker out there reading this or having this read to you, we see you. We appreciate you. Lagos would not function without you.</p>
+
+      <hr class="my-12 border-gray-200" />
+      
+      <p class="mb-6 leading-relaxed font-bold text-lg text-forest text-center">If this story moved you, here is how you can be part of what we are building.</p>
+
+      <div class="bg-forest text-white p-8 md:p-12 rounded-2xl my-12 text-center shadow-xl relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.png')] opacity-10"></div>
+        <div class="relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left mb-10">
+            <div>
+              <h3 class="text-gold font-bold text-xl mb-3">💚 Donate to support our ongoing community programs</h3>
+              <p class="text-white/90 text-base leading-relaxed mb-4">Your donation directly funds our outreaches and community programmes.</p>
+              <a href="/get-involved" class="inline-block bg-gold text-forest font-bold py-3 px-8 rounded-full hover:bg-white transition-colors">Donate Now →</a>
+            </div>
+            <div>
+              <h3 class="text-gold font-bold text-xl mb-3">🤝 Volunteer with us for our next outreach</h3>
+              <p class="text-white/90 text-base leading-relaxed mb-4">Join our team on the ground. See the people we serve and understand firsthand why this work matters.</p>
+              <a href="/get-involved" class="inline-block bg-transparent border-2 border-white hover:bg-white hover:text-forest text-white py-3 px-8 rounded-full font-bold transition-colors">Become a Volunteer →</a>
+            </div>
+          </div>
+          
+          <div class="mt-12 pt-8 border-t border-white/20 text-center">
+            <h3 class="text-gold font-bold text-xl mb-4">Follow us on our social pages to stay updated on everything we do</h3>
+            <p class="text-white/90 mb-6">Follow TEK Foundation:</p>
+            <div class="flex justify-center space-x-6">
+              <a href="https://instagram.com/tek_foundation" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors font-medium">Instagram</a>
+              <a href="https://linkedin.com/company/tek-foundation" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors font-medium">LinkedIn</a>
+              <a href="https://x.com/Tek_foundation1" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors font-medium">X (formerly Twitter)</a>
+              <a href="https://web.facebook.com/tekfoundationng/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors font-medium">Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="text-center font-bold text-deep-green text-xl mt-12 italic">We don't just feed people. We nourish hope and empower futures.</p>
+    `
+  },
   {
     id: "1",
     title: "Food Insecurity in Nigeria: The Silent Crisis Affecting Millions — And What You Can Do About It",

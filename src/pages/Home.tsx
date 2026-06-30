@@ -308,6 +308,30 @@ const Home = () => {
         </div>
       </section>
 
+      {/* UPCOMING EVENT TEASER SECTION */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-between bg-cream rounded-2xl p-6 md:p-8 shadow-sm">
+            <div className="mb-6 md:mb-0 text-center md:text-left">
+              <div className="text-xs font-bold text-gold uppercase tracking-wider mb-2">Upcoming Event</div>
+              <h3 className="font-heading font-bold text-2xl text-deep-green">Project Excel Her Initiative</h3>
+            </div>
+            
+            <div className="flex flex-col gap-3 w-full md:w-auto">
+              <div className="relative group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer h-16 w-full md:w-48 flex justify-center items-center">
+                <span className="font-medium text-forest group-hover:opacity-0 transition-opacity duration-300">View Details</span>
+                <div className="absolute inset-0 bg-forest flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white font-bold tracking-wider uppercase text-sm">Coming Soon</span>
+                </div>
+              </div>
+              <Link to="/news-and-stories#events" className="text-forest text-sm font-semibold hover:text-gold transition-colors text-center">
+                See All Events →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. CALL-TO-ACTION SECTION */}
       <section className="py-24 bg-forest text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pattern-dots"></div>

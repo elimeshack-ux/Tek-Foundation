@@ -1,9 +1,36 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
+import XIcon from '@/components/ui/XIcon';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setEmail('');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
 
   return (
     <footer className="bg-deep-green text-white pt-16 pb-8">
@@ -31,10 +58,10 @@ const Footer = () => {
               <a href="https://linkedin.com/company/tek-foundation" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-gold transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a href="https://twitter.com/tek_foundation" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-gold transition-colors">
-                <Twitter size={18} />
+              <a href="https://x.com/Tek_foundation1" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-gold transition-colors">
+                <XIcon size={18} />
               </a>
-              <a href="https://facebook.com/tek_foundation" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-gold transition-colors">
+              <a href="https://web.facebook.com/tekfoundationng/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-gold transition-colors">
                 <Facebook size={18} />
               </a>
             </div>
@@ -66,7 +93,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="text-gold shrink-0 mt-1" size={18} />
-                <span className="text-white/80">Lagos, Nigeria</span>
+                <span className="text-white/80">44, Adebowale Street, Ojodu, Lagos</span>
               </li>
             </ul>
           </div>
@@ -75,20 +102,32 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-bold text-lg mb-6 text-gold">Newsletter</h3>
             <p className="text-white/80 mb-4 text-sm">Subscribe to receive updates on our impact and upcoming events.</p>
-            <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Your Email Address" 
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-gold transition-colors"
-                required
-              />
-              <button 
-                type="submit" 
-                className="w-full bg-gold hover:bg-yellow-500 text-white font-bold py-3 rounded-lg transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
+            {status === 'success' ? (
+              <div className="bg-forest border border-gold/30 text-white px-4 py-3 rounded-lg text-sm flex items-center gap-2">
+                <span className="text-gold">✓</span> Thanks for subscribing!
+              </div>
+            ) : (
+              <form className="space-y-3" onSubmit={handleSubscribe}>
+                <input 
+                  type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your Email Address" 
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-gold transition-colors"
+                  required
+                />
+                <button 
+                  type="submit" 
+                  disabled={status === 'loading'}
+                  className="w-full bg-gold hover:bg-yellow-500 text-white font-bold py-3 rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+                </button>
+                {status === 'error' && (
+                  <p className="text-red-400 text-xs mt-1">There was a problem subscribing. Please try again.</p>
+                )}
+              </form>
+            )}
           </div>
         </div>
 
