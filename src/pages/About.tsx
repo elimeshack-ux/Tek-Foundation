@@ -16,7 +16,7 @@ const About = () => {
       <section className="relative h-[400px] flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://lh3.googleusercontent.com/d/1OLhI0vN_5rqjwONl1iYk7S8Spd9Kq-cq" 
+            src="/images/hero-about.jpg" 
             alt="TEK Foundation Team" 
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
@@ -63,7 +63,7 @@ const About = () => {
             >
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gold rounded-2xl z-0"></div>
               <img 
-                src="https://lh3.googleusercontent.com/d/1q_3Vo7U9HviBsQofRwcdMMhgeefi0LDg" 
+                src="/images/founder.jpg" 
                 alt="Our founding story" 
                 referrerPolicy="no-referrer"
                 className="rounded-2xl shadow-xl relative z-10 w-full"
@@ -186,7 +186,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-12">
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
               <img 
-                src="https://lh3.googleusercontent.com/d/1UrtcWIZjTjp7PJNE8kaXczNmGbXjdbfy" 
+                src="/images/partners/partner1.jpg" 
                 alt="ZenithPro Energy Ltd" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
@@ -194,7 +194,7 @@ const About = () => {
             </div>
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
               <img 
-                src="https://lh3.googleusercontent.com/d/1rr_yYegONg0WxiG8QEQgixLpqIhAkgSG" 
+                src="/images/partners/partner2.jpg" 
                 alt="S. Efejuku & Co" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
@@ -202,7 +202,7 @@ const About = () => {
             </div>
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
               <img 
-                src="/images/partners/lawma.png?v=2" 
+                src="/images/partners/lawma.png" 
                 alt="Lagos Waste Management Authority (LAWMA)" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"

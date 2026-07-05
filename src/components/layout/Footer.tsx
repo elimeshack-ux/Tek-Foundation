@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
@@ -40,7 +40,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img 
-                src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
+                src="/images/logo-tek.png" 
                 alt="TEK Foundation Logo" 
                 className="transparent-logo object-contain"
                 style={{ height: '100px', width: 'auto' }}

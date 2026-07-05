@@ -33,7 +33,7 @@ const Home = () => {
     "@type": "NGO",
     "name": "TEK Foundation",
     "url": "https://www.tekfoundation.org",
-    "logo": "https://www.tekfoundation.org/images/tek-logo.png",
+    "logo": "https://www.tekfoundation.org/images/logo-tek.png",
     "description": "A Nigerian NGO dedicated to tackling poverty and food insecurity through dignified food access, community outreach, and sustainable empowerment.",
     "address": {
       "@type": "PostalAddress",
@@ -59,7 +59,7 @@ const Home = () => {
       <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-white">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://lh3.googleusercontent.com/d/1rEhjJGgOBPur6CtSVQ_HpEXyKVlr3Rui" 
+            src="/images/hero-home.jpg" 
             alt="Community food distribution" 
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
@@ -211,17 +211,17 @@ const Home = () => {
               { 
                 title: "Food Distribution", 
                 desc: "Monthly food packages delivered directly to families in need.",
-                image: "https://lh3.googleusercontent.com/d/1LIMKgTBXm8S0boxTc-77ktmVGw427A9t"
+                image: "/images/programs/aid-a-meal.jpg"
               },
               { 
                 title: "Community Outreach", 
                 desc: "On-the-ground engagement with vulnerable communities.",
-                image: "https://lh3.googleusercontent.com/d/1QA5wXpWrQU7K_JPNEmksXtVhDFGFMIWy"
+                image: "/images/programs/project-santa.jpg"
               },
               { 
                 title: "Sustainable Solutions", 
                 desc: "Long-term programs that empower communities to achieve food security.",
-                image: "https://lh3.googleusercontent.com/d/1svG-yehYtVYjDrCnTpGjGIPrLyjSXzl-"
+                image: "/images/programs/excelher.jpg"
               }
             ].map((program, index) => (
               <motion.div 

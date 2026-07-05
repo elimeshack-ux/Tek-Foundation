@@ -165,7 +165,7 @@ const OurWork = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <img src="https://lh3.googleusercontent.com/d/1svG-yehYtVYjDrCnTpGjGIPrLyjSXzl-" alt="ExcelHER Initiative" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img src="/images/gallery/excelher-featured.jpg" alt="ExcelHER Initiative" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 50 }}

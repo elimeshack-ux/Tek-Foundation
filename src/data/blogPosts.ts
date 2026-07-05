@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
       <p class="mb-6 leading-relaxed font-bold text-lg text-forest text-center">If this story moved you, here is how you can be part of what we are building.</p>
 
       <div class="bg-forest text-white p-8 md:p-12 rounded-2xl my-12 text-center shadow-xl relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.png')] opacity-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-forest opacity-10"></div>
         <div class="relative z-10">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left mb-10">
             <div>
@@ -83,7 +83,7 @@ export const blogPosts: BlogPost[] = [
     category: "Education & Awareness",
     metaDescription: "Over 25 million Nigerians face acute food insecurity. Learn what's driving the crisis, who's most affected, and how TEK Foundation is working to create change — and how you can help.",
     publishDate: "2026-03-02",
-    featuredImage: "https://lh3.googleusercontent.com/d/1OHiRj6NiUgblDmUbk5NVfhb5ewslR5V3",
+    featuredImage: "/images/news/blog-food-insecurity.jpg",
     imageAlt: "TEK Foundation volunteers distributing food packages to families in Lagos, Nigeria",
     author: "TEK Foundation",
     readTime: "7 min read",
@@ -207,7 +207,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl md:text-3xl font-bold text-deep-green mt-12 mb-6">How You Can Help</h2>
       
       <div class="bg-forest text-white p-8 md:p-12 rounded-2xl my-12 text-center shadow-xl relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.png')] opacity-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-forest opacity-10"></div>
         <div class="relative z-10">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left mb-10">
             <div>
@@ -247,7 +247,7 @@ export const blogPosts: BlogPost[] = [
     category: "Education & Awareness",
     metaDescription: "Malnutrition is silently robbing millions of Nigerian children of their future. Learn what it does to a child's body and mind — and how TEK Foundation is fighting back.",
     publishDate: "2026-03-09",
-    featuredImage: "https://lh3.googleusercontent.com/d/1n-lzmoWQb8fiiYT5fxRFFzjaLcqrAtcd",
+    featuredImage: "/images/news/blog-aid-a-meal.jpg",
     imageAlt: "A young Nigerian child receiving food support from TEK Foundation volunteers during a community outreach in Lagos",
     author: "TEK Foundation",
     readTime: "8 min read",
@@ -362,7 +362,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl md:text-3xl font-bold text-deep-green mt-12 mb-6">How You Can Help Protect Nigerian Children from Malnutrition</h2>
       
       <div class="bg-forest text-white p-8 md:p-12 rounded-2xl my-12 text-center shadow-xl relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.png')] opacity-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-forest opacity-10"></div>
         <div class="relative z-10">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left mb-10">
             <div>

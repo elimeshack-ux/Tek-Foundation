@@ -3,12 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft } from 'lucide-react';
 import { teamData, TeamMember } from '../data/teamData';
 
-const MemberCard = ({ member, teamId }: { member: TeamMember; teamId: string }) => {
+const MemberCard: React.FC<{ member: TeamMember; teamId: string }> = ({ member, teamId }) => {
   const navigate = useNavigate();
 
   return (
@@ -43,7 +44,7 @@ const MemberCard = ({ member, teamId }: { member: TeamMember; teamId: string }) 
   );
 };
 
-const SimpleCard = ({ member }: { member: TeamMember }) => (
+const SimpleCard: React.FC<{ member: TeamMember }> = ({ member }) => (
   <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/5] group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl">
     <img
       src={member.photo1}

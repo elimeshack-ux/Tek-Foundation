@@ -43,7 +43,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 z-50">
           <img 
-            src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
+            src="/images/logo-tek.png" 
             alt="TEK Foundation Logo" 
             className="transparent-logo object-contain"
             style={{ height: '80px', width: 'auto' }}

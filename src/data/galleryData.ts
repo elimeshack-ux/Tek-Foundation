@@ -27,8 +27,8 @@ export const galleryData: Record<string, ProgramGallery> = {
   'excelher': {
     id: 'excelher',
     name: 'ExcelHER Initiative',
-    coverImage: 'https://lh3.googleusercontent.com/d/1svG-yehYtVYjDrCnTpGjGIPrLyjSXzl-',
-    photos: ['https://lh3.googleusercontent.com/d/1svG-yehYtVYjDrCnTpGjGIPrLyjSXzl-']
+    coverImage: '/images/gallery/excelher-featured.jpg',
+    photos: ['/images/gallery/excelher-featured.jpg']
   },
   'project-gfl': {
     id: 'project-gfl',

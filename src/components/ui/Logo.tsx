@@ -11,7 +11,7 @@ const Logo = ({ className, textClassName }: LogoProps) => {
   
   // The user provided Google Drive link ID: 1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9
   // We try to use the direct download link format
-  const logoUrl = "https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9";
+  const logoUrl = "/images/logo-tek.png";
 
   if (!imageError) {
     return (

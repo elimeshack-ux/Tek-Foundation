@@ -20,8 +20,8 @@ export interface TeamData {
   members: TeamMember[];
 }
 
-const photo1 = 'https://placehold.co/400x500/CCCCCC/555555?text=Photo';
-const photo2 = 'https://placehold.co/400x500/AAAAAA/333333?text=Photo+2';
+const photo1 = '/images/teams/team_board.jpg';
+const photo2 = '/images/teams/team_executive.jpg';
 
 export const teamData: Record<string, TeamData> = {
   board: {

@@ -146,7 +146,7 @@ const Checkout = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
             <img 
-              src="https://lh3.googleusercontent.com/d/1rc_UZZ6o7oTJr5pTsHn5R1qaFBbC0rO9" 
+              src="/images/logo-tek.png" 
               alt="TEK Foundation Logo" 
               className="transparent-logo object-contain"
               style={{ height: '80px', width: 'auto' }}

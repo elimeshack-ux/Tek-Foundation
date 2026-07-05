@@ -18,6 +18,7 @@ export default function ProgramGallery() {
       <SEO 
         title={`${program.name} Gallery`} 
         description={`View photos from the ${program.name} program.`}
+        canonical={`https://www.tekfoundation.org/work/gallery/${program.id}`}
       />
       
       {/* Header */}

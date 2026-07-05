@@ -39,7 +39,7 @@ const BlogPost = () => {
       "name": "TEK Foundation",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.tekfoundation.org/images/tek-logo.png"
+        "url": "https://www.tekfoundation.org/images/logo-tek.png"
       }
     },
     "datePublished": post.publishDate,
