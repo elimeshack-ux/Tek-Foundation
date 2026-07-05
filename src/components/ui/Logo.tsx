@@ -16,7 +16,7 @@ const Logo = ({ className, textClassName }: LogoProps) => {
   if (!imageError) {
     return (
       <div className={cn("relative overflow-hidden flex items-center justify-center bg-white rounded-full", className)}>
-        <img 
+        <img loading="lazy" 
           src={logoUrl} 
           alt="TEK Foundation Logo" 
           className="w-full h-full object-contain"

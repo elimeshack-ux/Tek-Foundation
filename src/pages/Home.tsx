@@ -58,7 +58,7 @@ const Home = () => {
       {/* 1. HERO SECTION */}
       <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-white">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="/images/hero-home.jpg" 
             alt="Community food distribution" 
             referrerPolicy="no-referrer"
@@ -233,7 +233,7 @@ const Home = () => {
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
+                  <img loading="lazy" 
                     src={program.image} 
                     alt={program.title} 
                     referrerPolicy="no-referrer"
@@ -277,7 +277,7 @@ const Home = () => {
                 className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
               >
                 <Link to={`/blog/${post.slug}`} className="block h-48 overflow-hidden">
-                  <img 
+                  <img loading="lazy" 
                     src={post.featuredImage} 
                     alt={post.imageAlt} 
                     referrerPolicy="no-referrer"

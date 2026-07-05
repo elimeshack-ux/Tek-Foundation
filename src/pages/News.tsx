@@ -55,7 +55,7 @@ const News = () => {
               {featuredPost && (
                 <Link to={`/news/${featuredPost.slug}`} className="block mb-12 group cursor-pointer">
                   <div className="rounded-2xl overflow-hidden shadow-lg mb-6 relative">
-                    <img 
+                    <img loading="lazy" 
                       src={featuredPost.featuredImage} 
                       alt={featuredPost.imageAlt} 
                       className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
@@ -86,7 +86,7 @@ const News = () => {
                 {otherPosts.map((post) => (
                   <Link key={post.id} to={`/news/${post.slug}`} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer border border-gray-100 block">
                     <div className="h-48 overflow-hidden">
-                      <img 
+                      <img loading="lazy" 
                         src={post.featuredImage} 
                         alt={post.imageAlt} 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

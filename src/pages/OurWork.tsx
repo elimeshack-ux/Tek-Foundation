@@ -74,7 +74,7 @@ const OurWork = () => {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <img src="/images/gallery/aid-a-meal/photo3.jpg" alt="Aid-A-Meal Africa" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img loading="lazy" src="/images/gallery/aid-a-meal/photo3.jpg" alt="Aid-A-Meal Africa" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
           </div>
 
@@ -85,7 +85,7 @@ const OurWork = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <img src="/images/gallery/project-santa/photo1.jpg" alt="Project Santa" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img loading="lazy" src="/images/gallery/project-santa/photo1.jpg" alt="Project Santa" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
@@ -154,7 +154,7 @@ const OurWork = () => {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <img src="/images/gallery/project-rack/photo1.jpg" alt="Project RACK" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img loading="lazy" src="/images/gallery/project-rack/photo1.jpg" alt="Project RACK" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
           </div>
 
@@ -165,7 +165,7 @@ const OurWork = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <img src="/images/gallery/excelher-featured.jpg" alt="ExcelHER Initiative" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img loading="lazy" src="/images/gallery/excelher-featured.jpg" alt="ExcelHER Initiative" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
@@ -234,7 +234,7 @@ const OurWork = () => {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <img src="/images/gallery/project-gfl/photo1.jpg" alt="Project GFL" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
+              <img loading="lazy" src="/images/gallery/project-gfl/photo1.jpg" alt="Project GFL" referrerPolicy="no-referrer" className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover" />
             </motion.div>
           </div>
         </div>
@@ -260,7 +260,7 @@ const OurWork = () => {
                   "The food package came just when I had lost all hope. TEK Foundation didn't just give me food; they gave me the strength to keep going for my children."
                 </p>
                 <div className="flex items-center gap-4">
-                  <img src={`https://picsum.photos/seed/face${story}/100/100`} alt="Beneficiary" referrerPolicy="no-referrer" className="w-12 h-12 rounded-full object-cover" />
+                  <img loading="lazy" src={`https://picsum.photos/seed/face${story}/100/100`} alt="Beneficiary" referrerPolicy="no-referrer" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <h4 className="font-bold text-deep-green">Mrs. Adebayo</h4>
                     <p className="text-xs text-gray-500 uppercase">Beneficiary, Lagos</p>

@@ -145,7 +145,7 @@ const Checkout = () => {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <img 
+            <img loading="lazy" 
               src="/images/logo-tek.png" 
               alt="TEK Foundation Logo" 
               className="transparent-logo object-contain"

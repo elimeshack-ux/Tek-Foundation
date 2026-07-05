@@ -39,7 +39,7 @@ const Footer = () => {
           {/* Column 1: About */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img 
+              <img loading="lazy" 
                 src="/images/logo-tek.png" 
                 alt="TEK Foundation Logo" 
                 className="transparent-logo object-contain"

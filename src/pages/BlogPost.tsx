@@ -107,7 +107,7 @@ const BlogPost = () => {
             animate={{ opacity: 1, y: 0 }}
             className="rounded-2xl overflow-hidden shadow-xl"
           >
-            <img 
+            <img loading="lazy" 
               src={post.featuredImage} 
               alt={post.imageAlt} 
               referrerPolicy="no-referrer"
@@ -181,7 +181,7 @@ const BlogPost = () => {
                   <Link key={article.id} to={`/news/${article.slug}`} className="group block">
                     <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 h-full flex flex-col">
                       <div className="h-48 overflow-hidden">
-                        <img 
+                        <img loading="lazy" 
                           src={article.featuredImage} 
                           alt={article.imageAlt} 
                           referrerPolicy="no-referrer"

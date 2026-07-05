@@ -22,7 +22,7 @@ export default function ProgramGalleryCards() {
               transition={{ delay: index * 0.1 }}
             >
               <Link to={`/work/gallery/${program.id}`} className="group block relative rounded-2xl overflow-hidden h-80 shadow-lg hover:shadow-xl transition-all">
-                <img 
+                <img loading="lazy" 
                   src={program.coverImage} 
                   alt={program.name} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

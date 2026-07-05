@@ -15,7 +15,7 @@ const About = () => {
       {/* HERO SECTION */}
       <section className="relative h-[400px] flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="/images/hero-about.jpg" 
             alt="TEK Foundation Team" 
             referrerPolicy="no-referrer"
@@ -62,7 +62,7 @@ const About = () => {
               className="relative"
             >
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gold rounded-2xl z-0"></div>
-              <img 
+              <img loading="lazy" 
                 src="/images/founder.jpg" 
                 alt="Our founding story" 
                 referrerPolicy="no-referrer"
@@ -185,7 +185,7 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-12">
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
-              <img 
+              <img loading="lazy" 
                 src="/images/partners/partner1.jpg" 
                 alt="ZenithPro Energy Ltd" 
                 referrerPolicy="no-referrer"
@@ -193,7 +193,7 @@ const About = () => {
               />
             </div>
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
-              <img 
+              <img loading="lazy" 
                 src="/images/partners/partner2.jpg" 
                 alt="S. Efejuku & Co" 
                 referrerPolicy="no-referrer"
@@ -201,7 +201,7 @@ const About = () => {
               />
             </div>
             <div className="flex items-center justify-center p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-all bg-white w-full max-w-lg aspect-square">
-              <img 
+              <img loading="lazy" 
                 src="/images/partners/lawma.png" 
                 alt="Lagos Waste Management Authority (LAWMA)" 
                 referrerPolicy="no-referrer"
