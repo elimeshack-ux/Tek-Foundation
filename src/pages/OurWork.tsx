@@ -60,7 +60,7 @@ const OurWork = () => {
               </ul>
               <div className="bg-cream p-6 rounded-xl border-l-4 border-gold mb-8">
                 <div className="font-bold text-3xl text-forest mb-1 flex items-center">
-                  2 Pilot Campuses
+                  Ongoing
                 </div>
                 <div className="text-sm text-gray-600 uppercase tracking-wider">IN LAGOS STATE</div>
               </div>
@@ -140,9 +140,9 @@ const OurWork = () => {
               </ul>
               <div className="bg-cream p-6 rounded-xl border-l-4 border-gold mb-8">
                 <div className="font-bold text-3xl text-forest mb-1 flex items-center">
-                  ₦50,000 – ₦100,000
+                  Quarterly Outreach
                 </div>
-                <div className="text-sm text-gray-600 uppercase tracking-wider">PER INTERVENTION CYCLE</div>
+                <div className="text-sm text-gray-600 uppercase tracking-wider">EVERY YEAR</div>
               </div>
               <Link to="/get-involved" className="bg-forest hover:bg-deep-green text-white px-8 py-3 rounded-full font-bold transition-colors inline-flex items-center">
                 Support This Program <ArrowRight size={18} className="ml-2" />
@@ -187,7 +187,7 @@ const OurWork = () => {
               </ul>
               <div className="bg-cream p-6 rounded-xl border-l-4 border-gold mb-8">
                 <div className="font-bold text-3xl text-forest mb-1 flex items-center">
-                  Biannual Program
+                  Every School Term
                 </div>
                 <div className="text-sm text-gray-600 uppercase tracking-wider">GIRL-CHILD EMPOWERMENT</div>
               </div>

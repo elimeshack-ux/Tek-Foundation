@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     category: "Partnerships",
     metaDescription: "See how TEK Foundation and LAWMA celebrated Lagos sanitation workers during Project RACK, a heartfelt random acts of kindness outreach in Surulere.",
     publishDate: "2026-06-06",
-    featuredImage: "/images/news/clean-street-heroes.jpg",
+    featuredImage: "/images/news/clean-street-heroes-new.jpg",
     imageAlt: "TEK Foundation and LAWMA team appreciating Lagos sanitation workers during Project RACK outreach in Surulere",
     author: "TEK Foundation",
     readTime: "4 min read",

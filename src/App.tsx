@@ -29,27 +29,24 @@ export default function App() {
       <Router>
         <ScrollToTop />
         <Routes>
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/donation-success" element={<DonationSuccess />} />
-        <Route path="/bank-transfer-confirmation" element={<BankTransferConfirmation />} />
-        <Route path="/volunteer-success" element={<VolunteerSuccess />} />
-        <Route path="*" element={
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/team/:teamId" element={<TeamCategory />} />
-              <Route path="/team/:teamId/:memberId" element={<TeamMemberBio />} />
-              <Route path="/our-work" element={<OurWork />} />
-              <Route path="/work/gallery/:programId" element={<ProgramGallery />} />
-              <Route path="/get-involved" element={<GetInvolved />} />
-              <Route path="/news-and-stories" element={<News />} />
-              <Route path="/news/:slug" element={<BlogPost />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Layout>
-        } />
-      </Routes>
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/donation-success" element={<DonationSuccess />} />
+          <Route path="/bank-transfer-confirmation" element={<BankTransferConfirmation />} />
+          <Route path="/volunteer-success" element={<VolunteerSuccess />} />
+          
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/team/:teamId" element={<TeamCategory />} />
+            <Route path="/team/:teamId/:memberId" element={<TeamMemberBio />} />
+            <Route path="/our-work" element={<OurWork />} />
+            <Route path="/work/gallery/:programId" element={<ProgramGallery />} />
+            <Route path="/get-involved" element={<GetInvolved />} />
+            <Route path="/news-and-stories" element={<News />} />
+            <Route path="/news/:slug" element={<BlogPost />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+        </Routes>
       </Router>
     </HelmetProvider>
   );

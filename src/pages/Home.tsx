@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ArrowRight, Heart, Users, Handshake, Utensils, Sprout, Globe } from 'lucide-react';
+import { ArrowRight, Heart, Users, Handshake, Utensils, Sprout, Globe, Calendar, X } from 'lucide-react';
 import SEO from '../components/SEO';
 import { blogPosts } from '../data/blogPosts';
 import CountUp from '../components/ui/CountUp';
+import excelherFlyer from '../assets/images/excelher_flyer_1783292887443.jpg';
 
 const Home = () => {
+  const [isFlyerOpen, setIsFlyerOpen] = useState(false);
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -276,7 +279,7 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
               >
-                <Link to={`/blog/${post.slug}`} className="block h-48 overflow-hidden">
+                <Link to={`/news/${post.slug}`} className="block h-48 overflow-hidden">
                   <img loading="lazy" 
                     src={post.featuredImage} 
                     alt={post.imageAlt} 
@@ -286,13 +289,13 @@ const Home = () => {
                 </Link>
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="text-xs font-bold text-gold uppercase tracking-wider mb-2">{post.category}</div>
-                  <Link to={`/blog/${post.slug}`} className="block">
+                  <Link to={`/news/${post.slug}`} className="block">
                     <h3 className="font-heading font-bold text-lg text-deep-green mb-3 hover:text-gold transition-colors line-clamp-2">{post.title}</h3>
                   </Link>
                   <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">
                     {post.metaDescription}
                   </p>
-                  <Link to={`/blog/${post.slug}`} className="text-forest font-semibold text-sm hover:text-gold transition-colors mt-auto inline-flex items-center">
+                  <Link to={`/news/${post.slug}`} className="text-forest font-semibold text-sm hover:text-gold transition-colors mt-auto inline-flex items-center">
                     Read More <ArrowRight size={14} className="ml-1" />
                   </Link>
                 </div>
@@ -311,26 +314,104 @@ const Home = () => {
       {/* UPCOMING EVENT TEASER SECTION */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-between bg-cream rounded-2xl p-6 md:p-8 shadow-sm">
-            <div className="mb-6 md:mb-0 text-center md:text-left">
-              <div className="text-xs font-bold text-gold uppercase tracking-wider mb-2">Upcoming Event</div>
-              <h3 className="font-heading font-bold text-2xl text-deep-green">Project Excel Her Initiative</h3>
-            </div>
-            
-            <div className="flex flex-col gap-3 w-full md:w-auto">
-              <div className="relative group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer h-16 w-full md:w-48 flex justify-center items-center">
-                <span className="font-medium text-forest group-hover:opacity-0 transition-opacity duration-300">View Details</span>
-                <div className="absolute inset-0 bg-forest flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white font-bold tracking-wider uppercase text-sm">Coming Soon</span>
+          <div className="max-w-4xl mx-auto bg-cream rounded-3xl overflow-hidden shadow-sm border border-gold/10">
+            <div className="grid grid-cols-1 md:grid-cols-12 items-center">
+              {/* Event Content Details */}
+              <div className="p-8 md:p-12 md:col-span-7 flex flex-col justify-between h-full">
+                <div>
+                  <div className="inline-flex items-center gap-1.5 text-xs font-bold text-gold uppercase tracking-widest mb-4">
+                    <span className="w-2 h-2 rounded-full bg-gold animate-ping"></span>
+                    Ongoing
+                  </div>
+                  <h3 className="font-heading font-bold text-2xl md:text-3xl text-deep-green mb-3">
+                    "Project ExcelHer Initiative"
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-sm md:text-base">
+                    An inspiring outreach program focused on mentoring, mindset transformation, and empowering young girls in Nigeria.
+                  </p>
+                  
+                  {/* Proposed Date Format */}
+                  <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 mb-6 border border-gold/5 flex items-start gap-3">
+                    <Calendar className="text-gold mt-0.5 shrink-0" size={20} />
+                    <div>
+                      <div className="font-semibold text-deep-green text-sm">Proposed Date</div>
+                      <div className="text-xs text-gray-500 font-mono mt-0.5">TBA (To be communicated soon)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 items-center">
+                  <button
+                    onClick={() => setIsFlyerOpen(true)}
+                    className="w-full sm:w-auto bg-forest hover:bg-deep-green text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all shadow-sm text-center cursor-pointer"
+                  >
+                    View Flyer Details
+                  </button>
+                  <Link 
+                    to="/news-and-stories#events" 
+                    className="text-forest text-sm font-semibold hover:text-gold transition-colors py-2 text-center"
+                  >
+                    See All Events →
+                  </Link>
                 </div>
               </div>
-              <Link to="/news-and-stories#events" className="text-forest text-sm font-semibold hover:text-gold transition-colors text-center">
-                See All Events →
-              </Link>
+
+              {/* Flyer Thumbnail on the Right */}
+              <div className="p-8 md:p-12 md:col-span-5 bg-white/40 flex justify-center items-center border-t md:border-t-0 md:border-l border-gold/10 h-full min-h-[320px]">
+                <div 
+                  onClick={() => setIsFlyerOpen(true)}
+                  className="relative group cursor-zoom-in rounded-2xl overflow-hidden shadow-md max-w-[240px] border border-gray-100 transition-all hover:scale-[1.02] hover:shadow-xl"
+                >
+                  <img 
+                    src={excelherFlyer} 
+                    alt="Project ExcelHer Initiative Outreach Flyer" 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center text-white gap-2">
+                    <span className="bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-medium uppercase tracking-wider">
+                      Click to Enlarge
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* FLYER LIGHTBOX MODAL */}
+      {isFlyerOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="relative max-w-lg w-full bg-white rounded-3xl overflow-hidden shadow-2xl p-4 flex flex-col items-center"
+          >
+            <button 
+              onClick={() => setIsFlyerOpen(false)}
+              className="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 text-gray-700 p-2 rounded-full transition-colors cursor-pointer"
+              aria-label="Close modal"
+            >
+              <X size={20} />
+            </button>
+            
+            <div className="text-center mt-2 mb-4 px-8">
+              <h4 className="font-heading font-bold text-xl text-deep-green">"Project ExcelHer Initiative" Flyer</h4>
+              <p className="text-xs text-gray-500 mt-1">Proposed Date: TBA (To be communicated soon)</p>
+            </div>
+
+            <div className="relative w-full max-h-[70vh] overflow-hidden rounded-2xl border border-gray-100">
+              <img 
+                src={excelherFlyer} 
+                alt="Project ExcelHer Initiative Outreach Flyer" 
+                referrerPolicy="no-referrer"
+                className="w-full h-auto max-h-[70vh] object-contain mx-auto"
+              />
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* 6. CALL-TO-ACTION SECTION */}
       <section className="py-24 bg-forest text-white text-center relative overflow-hidden">

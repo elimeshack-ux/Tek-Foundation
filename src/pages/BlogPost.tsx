@@ -1,10 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Calendar, Clock, User, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, Facebook, Linkedin } from 'lucide-react';
 import SEO from '../components/SEO';
 import { blogPosts } from '../data/blogPosts';
 import { useEffect } from 'react';
 import Logo from '@/components/ui/Logo';
+import XIcon from '@/components/ui/XIcon';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -53,6 +54,9 @@ const BlogPost = () => {
   const relatedArticles = blogPosts
     .filter(p => p.slug !== slug)
     .slice(0, 3);
+
+  const shareUrl = `https://www.tekfoundation.org/news/${post.slug}`;
+  const shareText = `Check out this article: ${post.title}`;
 
   return (
     <div className="pt-20">
@@ -129,15 +133,30 @@ const BlogPost = () => {
               <Share2 size={20} /> Share this article
             </h3>
             <div className="flex gap-4">
-              <button className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+              <a 
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:opacity-90 transition-all duration-300 hover:scale-105"
+              >
                 <Facebook size={18} />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center hover:opacity-90 transition-opacity">
-                <Twitter size={18} />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-blue-700 text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+              </a>
+              <a 
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:opacity-90 transition-all duration-300 hover:scale-105"
+              >
+                <XIcon size={16} />
+              </a>
+              <a 
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:opacity-90 transition-all duration-300 hover:scale-105"
+              >
                 <Linkedin size={18} />
-              </button>
+              </a>
             </div>
           </div>
 
