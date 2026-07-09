@@ -10,7 +10,7 @@ export const galleryData: Record<string, ProgramGallery> = {
     id: 'aid-a-meal',
     name: 'Aid-A-Meal Africa',
     coverImage: '/images/gallery/aid-a-meal/photo1.jpg',
-    photos: Array.from({ length: 5 }, (_, i) => `/images/gallery/aid-a-meal/photo${i + 1}.jpg`)
+    photos: Array.from({ length: 4 }, (_, i) => `/images/gallery/aid-a-meal/photo${i + 1}.jpg`)
   },
   'project-santa': {
     id: 'project-santa',
@@ -22,7 +22,7 @@ export const galleryData: Record<string, ProgramGallery> = {
     id: 'project-rack',
     name: 'Project RACK',
     coverImage: '/images/gallery/project-rack/photo1.jpg',
-    photos: Array.from({ length: 5 }, (_, i) => `/images/gallery/project-rack/photo${i + 1}.jpg`)
+    photos: Array.from({ length: 4 }, (_, i) => `/images/gallery/project-rack/photo${i + 1}.jpg`)
   },
   'excelher': {
     id: 'excelher',
