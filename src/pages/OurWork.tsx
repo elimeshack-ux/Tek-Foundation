@@ -260,7 +260,7 @@ const OurWork = () => {
                   "The food package came just when I had lost all hope. TEK Foundation didn't just give me food; they gave me the strength to keep going for my children."
                 </p>
                 <div className="flex items-center gap-4">
-                  <img loading="lazy" src={`https://picsum.photos/seed/face${story}/100/100`} alt="Beneficiary" referrerPolicy="no-referrer" className="w-12 h-12 rounded-full object-cover" />
+                  <img loading="lazy" src="/images/teams/default-avatar.png" alt="Beneficiary" referrerPolicy="no-referrer" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <h4 className="font-bold text-deep-green">Mrs. Adebayo</h4>
                     <p className="text-xs text-gray-500 uppercase">Beneficiary, Lagos</p>

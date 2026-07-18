@@ -36,7 +36,7 @@ const Home = () => {
     "@type": "NGO",
     "name": "TEK Foundation",
     "url": "https://www.tekfoundation.org",
-    "logo": "https://www.tekfoundation.org/images/logo-tek.png",
+    "logo": (typeof window !== "undefined" ? window.location.origin : "") + "/images/logo-tek.png",
     "description": "A Nigerian NGO dedicated to tackling poverty and food insecurity through dignified food access, community outreach, and sustainable empowerment.",
     "address": {
       "@type": "PostalAddress",

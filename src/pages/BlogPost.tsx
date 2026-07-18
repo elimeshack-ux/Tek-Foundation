@@ -40,7 +40,7 @@ const BlogPost = () => {
       "name": "TEK Foundation",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.tekfoundation.org/images/logo-tek.png"
+        "url": (typeof window !== "undefined" ? window.location.origin : "") + "/images/logo-tek.png"
       }
     },
     "datePublished": post.publishDate,

@@ -50,3 +50,8 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+.pattern-dots {
+  background-image: url('/images/pattern.png');
+  background-repeat: repeat;
+}

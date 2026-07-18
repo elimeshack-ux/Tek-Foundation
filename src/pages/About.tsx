@@ -46,14 +46,35 @@ const About = () => {
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-forest mb-6">Our Story</h2>
               <div className="w-20 h-1 bg-gold rounded-full mb-8"></div>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Founded in Lagos, Nigeria, TEK Foundation emerged from a simple yet powerful observation: that hunger is not just about a lack of food, but a lack of access and opportunity.
+                Some stories begin with a plan. Ours began with a calling.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                What started as a small group of volunteers distributing meals on weekends has grown into a structured organization committed to systemic change. We believe that by addressing immediate hunger while simultaneously building long-term capacity, we can break the cycle of poverty.
+                TEK Foundation was born from a simple act of obedience to God's leading. With no grand strategy or abundant resources, it began with a desire to share whatever was available with those in need at the end of each year. It was never about the size of the gift; it was about ensuring that someone, somewhere, felt seen, valued, and loved.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed font-serif-italic border-l-4 border-gold pl-6 py-2 bg-cream/50 rounded-r-lg">
-                "We don't just feed people; we nourish hope and empower futures."
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                At the heart of TEK Foundation is a simple but profound belief: <strong className="font-bold text-forest">"No matter how little, you can aid a smile."</strong> We believe that kindness is not measured by the abundance of our resources but by the willingness of our hearts. After all, <em className="italic">if you cannot give from your little, you will not give when you have much.</em> True generosity begins long before abundance, it begins with compassion.
               </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                What started as a personal act of kindness has grown into a movement dedicated to restoring hope, empowering communities, and inspiring a culture of generosity. Every outreach, every life impacted, and every smile restored reminds us that lasting change often begins with one person choosing to care.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Today, TEK Foundation continues to champion purposeful acts of kindness, proving that ordinary people can make an extraordinary difference when they choose compassion over convenience. Because when one person chooses to care, a smile is restored. And when many choose to care, communities are transformed.
+              </p>
+              
+              <div className="my-8 border-l-4 border-gold pl-6 py-3 bg-cream/50 rounded-r-lg">
+                <p className="text-xl text-forest font-bold leading-relaxed italic">
+                  "No matter how little, you can aid a smile."
+                </p>
+              </div>
+
+              <div className="mt-8 pt-4 border-t border-gray-100">
+                <p className="text-lg font-bold text-gray-900">
+                  Mrs. Timinimi Ediseimokumor Ikechukwu
+                </p>
+                <p className="text-sm font-bold text-gold italic">
+                  Founder, TEK Foundation
+                </p>
+              </div>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 30 }}

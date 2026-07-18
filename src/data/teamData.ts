@@ -20,8 +20,8 @@ export interface TeamData {
   members: TeamMember[];
 }
 
-const photo1 = '/images/teams/team_board.jpg';
-const photo2 = '/images/teams/team_executive.jpg';
+const photo1 = '/images/teams/default-avatar.png';
+const photo2 = '/images/teams/default-avatar.png';
 
 export const teamData: Record<string, TeamData> = {
   board: {
